@@ -1,0 +1,45 @@
+<style>
+    .decipher-animation {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        line-height: 1.4;
+    }
+    
+    .decipher-animation::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        white-space: pre-wrap;
+        overflow: hidden;
+        animation: decipher 5s steps(30, end) forwards;
+        color: #FFDE21;
+    }
+    
+    .decipher-animation span {
+        display: inline-block;
+        color: transparent;
+        animation: reveal 5s steps(30, end) forwards;
+    }
+    
+    @keyframes decipher {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+    
+    @keyframes reveal {
+        from {
+            color: transparent;
+        }
+        to {
+            color: white;
+        }
+    }
+</style>
