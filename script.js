@@ -15,7 +15,7 @@ const qs = require('querystring');
 
 class IPQS {
     constructor() {
-        this.key = 'LHSn1AzTW49K7cA3ly7ZSjdK0pzKTSkh';
+        this.key = '000';
     }
 
     async maliciousUrlScannerApi(url, vars = {}) {
